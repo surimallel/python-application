@@ -25,7 +25,7 @@ pipeline {
         stage('SonarQube Analysis') {
             steps {
                 script {
-                    def scannerHome = tool 'SonarScanner'
+                    def scannerHome = tool 'SonarQube'
                     withSonarQubeEnv('SonarQube') {
                         sh "${scannerHome}/bin/sonar-scanner"
                     }
